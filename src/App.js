@@ -12,6 +12,11 @@ import { Route, Switch, HashRouter } from 'react-router-dom';
 // import New from './view/New.js';
 // import Login from './view/login/index.js';
 
+import HooksC from './view/test/Hooks.js';
+import HooksC2 from './view/test/Hook2.js';
+import test from './view/test/test.js';
+import ReduxPage from './view/test/ReduxPage.jsx';
+
 import Register from './view/account/Register.js';
 import Login from './view/account/Login.js';
 
@@ -26,6 +31,10 @@ function App() {
         <Route component={Register} path="/register" />
         <Route component={Login} path="/login" />
         <Route component={Home} path="/home" />
+        <Route component={HooksC} path="/hooks" />
+        <Route component={HooksC2} path="/hook2" />
+        <Route component={test} path="/test" />
+        <Route component={ReduxPage} path="/ReduxPage" />
         {/* <Route component={MyProgress} path="/progress" /> */}
         {/* <Route component={New} path="/new" /> */}
         {/* <Route component={About} path="/about" /> */}

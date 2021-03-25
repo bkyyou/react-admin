@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var timer;
+    function delay(time) {
+      return new Promise(resolve => timer = setTimeout(resolve, time));
+    }
+
+    async function fn1() {
+      await delay(1000);
+      console.log(333)
+    }
+    console.log(111);
+    clearTimeout(timer);
+    fn1();
+    console.log(222);
+  </script>
+</body>
+</html>
