@@ -17,8 +17,9 @@ const files = require.context("../../view/", true, /\.js$/);
 // const files = require.context("../../router/", true, /\.js$/); 
 
 // // ./account/Login.js  ./department/add/index.js
-console.log('files', files.keys());
-console.log('files', files.keys);
+console.log('files', files);
+console.log('files.key()', files.keys());
+console.log('files.keys', files.keys);
 
 // ./src/view/account/Login.js
 // "./src/view/user/list/index.js"

@@ -11,7 +11,9 @@ function getToken() {
 const PrivateRouter = ({ component: Component, ...rest }) => {
   return (
     <Route {...rest} render={routeProps => {
-      return getToken() ? <Component {...routeProps} /> : <Login></Login>
+      // return getToken() ? <Component {...routeProps} /> : <Login></Login>
+      return <Component {...routeProps} />
+      // return <Login></Login>
     }}></Route>
 
     // <Route exact render={() => <Login />} path='/'></Route>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 // import { Layout, Menu } from 'antd';
 import { Layout } from 'antd';
 import Aside from '../..//components/home/aside/index.js';
@@ -35,6 +36,14 @@ class Home extends Component {
     console.log(collapsed);
     this.setState({ collapsed: !this.state.collapsed });
   };
+  componentWillReceiveProps(nextProps) {
+    console.log('nextProps', nextProps);
+    console.log('this.props.location.hash', this.props);
+    if (nextProps.location.hash !== this.props.location.hash) {
+      // window.leftMenu.forceUpdate(); //当路由不同时，强制更新左边栏组件
+    }
+
+  }
   componentDidMount() {
     var test = document.getElementById('test');
     var remove = document.getElementById('remove');
@@ -75,4 +84,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default withRouter(Home);

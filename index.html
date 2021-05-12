@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+
+<link rel="icon" href="/static/common/image/favicon.ico" />
+
+<title><%= title %></title>
+
+<style type="text/css">#textbook, body, html {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+
+<link href="/static/common/jquery@2.1.1/dist/jquery.min.js" rel="preload" as="script" />
+
+<link href="/static/common/vue@2.6.10/dist/vue.min.js" rel="preload" as="script" />
+
+<% if(links && links.indexOf("vuex")>-1){ %>
+
+<link href="/static/common/vuex@3.0.1/dist/vuex.min.js" rel="preload" as="script" />
+
+<% } %>
+
+<link href="/static/common/response_v1.1.0.js" rel="preload" as="script" />
+
+<link href="/static/common/h5@1.0.1/common.bundle.js" rel="preload" as="script" />
+
+<link href="/static/common/h5pagerender@1.0.0/PageRender.js" rel="preload" as="script" />
+
+<link href="/static/common/h5@1.0.1/h5_c_sdk.bundle.js" rel="preload" as="script" />
+
+<link href="/static/common/h5log@1.1.1/index.js" rel="preload" as="script" />
+
+<% if(links && links.indexOf("drag")>-1){ %>
+
+<link href="/static/common/drag@1.1.2/index.js" rel="preload" as="script" />
+
+<% } %>
+
+<% if(links && links.indexOf("lottie")>-1){ %>
+
+<link href="/static/common/lottie@5.5.4/lottie.min.js" rel="preload" as="script" />
+
+<% } %>
+
+<% if(links && links.indexOf("axios")>-1){ %>
+
+<link href="/static/common/axios@0.18.0/axios.min.js" rel="preload" as="script" />
+
+<% } %>
+
+<% if(links && links.indexOf("appConfig")>-1){ %>
+
+<link href="/static/common/appConfig@1.0.1/appConfig.js" rel="preload" as="script" />
+
+<% } %>
+
+</head>
+
+<body>
+
+<div id="textbook"></div>
+
+<script src="/static/common/jquery@2.1.1/dist/jquery.min.js"></script>
+
+<script src="/static/common/vue@2.6.10/dist/vue.min.js"></script>
+
+<% if(links && links.indexOf("vuex")>-1){ %>
+
+<script src="/static/common/vuex@3.0.1/dist/vuex.min.js"></script>
+
+<% } %>
+
+<script src="/static/common/response_v1.1.0.js"></script>
+
+<script src="/static/common/h5@1.0.1/common.bundle.js"></script>
+
+<script src="/static/common/h5pagerender@1.0.0/PageRender.js"></script>
+
+<script src="/static/common/h5@1.0.1/h5_c_sdk.bundle.js"></script>
+
+<script src="/static/common/h5log@1.1.1/index.js"></script>
+
+<% if(links && links.indexOf("lottie")>-1){ %>
+
+<script src="/static/common/lottie@5.5.4/lottie.min.js"></script>
+
+<% } %>
+
+<% if(links && links.indexOf("drag")>-1){ %>
+
+<script src="/static/common/drag@1.1.2/index.js"></script>
+
+<% } %>
+
+<% if(links && links.indexOf("axios")>-1){ %>
+
+<script src="/static/common/axios@0.18.0/axios.min.js"></script>
+
+<% } %>
+
+<% if(links && links.indexOf("appConfig")>-1){ %>
+
+<script src="/static/common/appConfig@1.0.1/appConfig.js"></script>
+
+<% } %>
+
+<script type="text/javascript" src="<%= jsurl %>"></script>
+
+<script id="__PAGE__" type="application/json">{"template":<%- JSON.stringify(template) %>,"componentName":<%- JSON.stringify(componentName) %>,"props":{"content":<%- JSON.stringify(content) %>}}</script>
+
+<script type="text/javascript">
+
+!function() {
+
+window.__version='v2';
+
+var page = JSON.parse(document.getElementById("__PAGE__").innerText);
+
+if (page.props && page.props.content && typeof page.props.content==='string') page.props.content = JSON.parse(page.props.content);
+
+PageRender.init("#textbook", page);
+
+window.contentData=(page.props && page.props.content)||{};
+
+}();</script>
+
+</body>
+
+</html>

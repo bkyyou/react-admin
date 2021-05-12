@@ -15,7 +15,9 @@ import { Route, Switch, HashRouter } from 'react-router-dom';
 import HooksC from './view/test/Hooks.js';
 import HooksC2 from './view/test/Hook2.js';
 import test from './view/test/test.js';
-import ReduxPage from './view/test/ReduxPage.jsx';
+import FormRender from './view/test/FormRender.js';
+// import ReduxPage from './view/test/ReduxPage.jsx';
+import ReduxPage2 from './view/test/ReduxPage2';
 
 import Register from './view/account/Register.js';
 import Login from './view/account/Login.js';
@@ -34,7 +36,9 @@ function App() {
         <Route component={HooksC} path="/hooks" />
         <Route component={HooksC2} path="/hook2" />
         <Route component={test} path="/test" />
-        <Route component={ReduxPage} path="/ReduxPage" />
+        {/* <Route component={ReduxPage} path="/ReduxPage" /> */}
+        <Route component={ReduxPage2} path="/ReduxPage2" />
+        <Route component={FormRender} path="/FormRender" />
         {/* <Route component={MyProgress} path="/progress" /> */}
         {/* <Route component={New} path="/new" /> */}
         {/* <Route component={About} path="/about" /> */}

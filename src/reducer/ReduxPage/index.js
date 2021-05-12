@@ -2,7 +2,8 @@
 import * as types from '../../action/mutation-type';
 
 const initialState = {
-  homeName: '课堂'
+  homeName: '课堂',
+  // nickname: 'zs'
 }
 
 const mutations = {
@@ -15,11 +16,16 @@ const mutations = {
       ...state,
       homeName: action.payload
     }
+    // return Object.assign({}, state, {
+    //   visibilityFilter: action.filter
+    // })
   }
 }
 
 export default function(state = initialState, action) {
-  // console.log('action', action);
+  console.log('reducer reduxpage=====');
+  console.log('state', state);
+  console.log('action', action);
   // console.log('mutations[action.type]', mutations[action.type]);
   if (!mutations[action.type]) return state;
   // console.log(11111)
