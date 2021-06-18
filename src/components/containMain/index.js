@@ -17,9 +17,9 @@ const files = require.context("../../view/", true, /\.js$/);
 // const files = require.context("../../router/", true, /\.js$/); 
 
 // // ./account/Login.js  ./department/add/index.js
-console.log('files', files);
-console.log('files.key()', files.keys());
-console.log('files.keys', files.keys);
+// console.log('files', files);
+// console.log('files.key()', files.keys());
+// console.log('files.keys', files.keys);
 
 // ./src/view/account/Login.js
 // "./src/view/user/list/index.js"
@@ -34,13 +34,16 @@ let allHomeRouter = [];
 //   return files.resolve(key);
 // });
 files.keys().forEach(key => {
-  if (!(new RegExp(noContainsArr.join('|'), 'ig').test(key)))  allHomeRouter.push(getRightData(key))
+  // console.log('key', key)
+  if (!(new RegExp('\/(' + noContainsArr.join('|') + ')\/', 'ig').test(key)))  {
+    './dynamickTest/dynamic.js' != key && allHomeRouter.push(getRightData(key))
+  }
 })
 
 // console.log('paths', paths);
 
 function getRightData(val) {
-  console.log('val', val);
+  // console.log('val', val);
   var arr = val.split('/');
   // console.log('arr', arr);
   // var component = '../../' + arr.slice(arr.indexOf('view')).join('/');
@@ -49,6 +52,8 @@ function getRightData(val) {
   // console.log('path', path);
   // console.log('files[val].default', files(val).default);
   // path = import(path);
+  // console.log(files(val));
+  
   return {
     component: files(val).default,
     path
@@ -57,7 +62,7 @@ function getRightData(val) {
 
 // allHomeRouter = allHomeRouter.slice(2);
 
-console.log('allHomeRouter', allHomeRouter);
+// console.log('allHomeRouter', allHomeRouter);
 
 
 class ContainMain extends Component{

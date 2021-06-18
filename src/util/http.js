@@ -6,6 +6,8 @@ import { message } from "antd";
 // console.log(process.env.REACT_APP_BASE_URL)
 
 const baseURL = process.env.REACT_APP_BASE_URL;
+// const baseURL = 'http://1.116.142.138:3000';
+// const baseURL = 'http://localhost:4008';
 
 const instance = axios.create({
   baseURL,

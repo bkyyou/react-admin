@@ -66,3 +66,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+# 在 redux 中添加数据和修改方法
+1. 在 action 中添加修改方法，在 action/mutation-type.js 添加类型
+2. 在 reducer 定义数据，并在 mutations 中添加修改的方法
+3. 在 reducer/reducer.js 中添加 新增的方法

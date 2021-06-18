@@ -45,17 +45,17 @@ class Home extends Component {
 
   }
   componentDidMount() {
-    var test = document.getElementById('test');
-    var remove = document.getElementById('remove');
-    function funTest() {
-        console.log('test');
-        // test.removeEventListener('click');
-    }
-    test.addEventListener('click', funTest);
-    remove.addEventListener('click', function() {
-      console.log('test');
-      test.removeEventListener('click', funTest);
-    })
+    // var test = document.getElementById('test');
+    // var remove = document.getElementById('remove');
+    // function funTest() {
+    //     console.log('test');
+    //     // test.removeEventListener('click');
+    // }
+    // test.addEventListener('click', funTest);
+    // remove.addEventListener('click', function() {
+    //   console.log('test');
+    //   test.removeEventListener('click', funTest);
+    // })
   }
   render() {
     return (
@@ -70,8 +70,8 @@ class Home extends Component {
             <Header className='header' onClick={this.onCollapse}>Header</Header>
             <Content className="content">
               <div>
-                <div id="test">test</div>
-                <div id="remove">remove</div>
+                {/* <div id="test">test</div>
+                <div id="remove">remove</div> */}
                 <ContainMain></ContainMain>
               </div>
             </Content>

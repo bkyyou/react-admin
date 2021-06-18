@@ -8,7 +8,7 @@ const initialState = {
 
 const mutations = {
   [types.QUERY_GLOBAL_NAME](state) {
-    console.log('QUERY_GLOBAL_NAME====')
+    // console.log('QUERY_GLOBAL_NAME====')
     return { ...state };
   },
   [types.UPDATE_GLOBAL_NAME](state, action) {
@@ -23,9 +23,9 @@ const mutations = {
 }
 
 export default function(state = initialState, action) {
-  console.log('reducer reduxpage=====');
-  console.log('state', state);
-  console.log('action', action);
+  // console.log('reducer reduxpage=====');
+  // console.log('state', state);
+  // console.log('action', action);
   // console.log('mutations[action.type]', mutations[action.type]);
   if (!mutations[action.type]) return state;
   // console.log(11111)

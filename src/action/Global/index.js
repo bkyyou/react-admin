@@ -1,8 +1,8 @@
 import * as types from '../mutation-type'
 
 export function updateNickName(param) {
-  console.log('action global====')
-  console.log('param', param);
+  // console.log('action global====')
+  // console.log('param', param);
   return {
     type: types.UPDATE_GLOBAL_NICKNAME,
     payload: param
@@ -11,8 +11,8 @@ export function updateNickName(param) {
 }
 
 export function asyncUpdateNickName(param) {
-  console.log('action global====')
-  console.log('param', param);
+  // console.log('action global====')
+  // console.log('param', param);
   // return {
   //   type: types.UPDATE_GLOBAL_NICKNAME,
   //   payload: param
@@ -25,5 +25,12 @@ export function asyncUpdateNickName(param) {
       // })
       dispatch(updateNickName(param));
     }, 1000);
+  }
+}
+
+export function updateLoadingState(params) {  
+  return {
+    type: types.UPDATE_GLOBAL_LOADINGSTATE,
+    payload: params
   }
 }
