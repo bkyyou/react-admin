@@ -101,6 +101,16 @@ class UserList extends Component {
           data
         })
       }, 2000);
+
+      setTimeout(() => {
+        columns[0].title = 1
+        console.log(111222)
+        this.props.updateLoadingState({show: false, loadingTip: '表格加载中...'})
+
+        this.setState({
+          columns
+        })
+      }, 6000);
     })
   }
   render() {

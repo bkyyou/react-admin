@@ -9,7 +9,7 @@ const DynamicTest = createLoadable({
   // 我们可以根据其props进行样式定制化
   // loading: ({loading,err})=> loading ? 'loading' : err ? 'error': null,
   // delay(ms) 延迟加载的时间
-  delay: 5000,
+  delay: 1000,
 });
 
 
