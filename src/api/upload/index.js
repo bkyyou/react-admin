@@ -1,16 +1,17 @@
 import instance from '../../util/http.js'
 
 // 下载
-export function getUserList(data, config) {
+export function downloadRandomNum(data, config) {
   return instance.request({
     method: 'get',
     url: '/getRandomNum',
     params: data,
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json; charset=utf-8',
-      // withCredentials: true,
-    },
+    responseType: 'blob'
+    // headers: {
+    //   Accept: 'application/json',
+    //   'Content-Type': 'application/json; charset=utf-8',
+    //   // withCredentials: true,
+    // },
   })
 }
 

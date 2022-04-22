@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button,  Form, Input, Radio, InputNumber } from 'antd';
-import { getUserList } from '../../api/upload/index';
+import { downloadRandomNum } from '../../api/upload/index';
 import './index.scss';
 
 const Upload = () => {
@@ -13,12 +13,12 @@ const Upload = () => {
   };
 
   function upload(data) {
-    getUserList(data).then(response => {
+    downloadRandomNum(data).then(response => {
       console.log('response', response);
       // const filename = response.headers['content-disposition'].match(
       //   /filename=(.*)/
       // )[1]
-      const filename = 'random.txt';
+      const filename = 'testFile.xlsx';
       // 将二进制流转为 blob
       const blob = new Blob([response.data], { type: 'application/octet-stream' })
       console.log('blob', blob);
