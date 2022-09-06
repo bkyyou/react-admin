@@ -2,7 +2,8 @@ import React from 'react';
 // import logo from './logo.svg';
 
 // 样式入口
-import './style/main.scss';
+// import './style/main.scss';
+import './style/main.css';
 
 // import { Router, Route, Switch, HashHistory, Link } from 'react-router-dom';
 import { Route, Switch, HashRouter } from 'react-router-dom';

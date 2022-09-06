@@ -17,8 +17,8 @@ class UserAdd extends Component {
 //   )
 // }
 
-new Promise().then((resolve, reject) => {
+// new Promise().then((resolve, reject) => {
   
-})
+// })
 
 export default UserAdd;

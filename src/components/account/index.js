@@ -7,7 +7,7 @@ import { Form, Input, Button, Row, Col, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { reg_pwd } from '../../util/vaildate.js';
 import Code from '../Code.js';
-import './index.scss';
+import './index.css';
 
 class Login extends Component {
   constructor(props) {
@@ -82,7 +82,7 @@ class Login extends Component {
                 {
                   required: true, message: '密码不能为空'
                 },
-                { pattern: reg_pwd, message: '必须字母 + 函数， 6 - 20 位' }
+                // { pattern: reg_pwd, message: '必须字母 + 函数， 6 - 20 位' }
               ]}
             >
               <Input

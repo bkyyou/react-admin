@@ -1,16 +1,16 @@
 .logo{
   height: 100px;
-  // background-color: #ffffff;
+  /* // background-color: #ffffff; */
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  &>div{
-    width: 30%;
-    height: 30px;
-    background-color: #cccccc;
-    opacity: 0.5;
-  }
+.logo>div{
+  width: 30%;
+  height: 30px;
+  background-color: #cccccc;
+  opacity: 0.5;
 }
 
 .aside_container{

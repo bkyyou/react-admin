@@ -21,7 +21,7 @@ import { Menu } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import Routers from '../../../router/index.js';
-import './index.scss';
+import './index.css';
 
 // const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;

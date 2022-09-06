@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { Layout } from 'antd';
 import Aside from '../..//components/home/aside/index.js';
 import ContainMain from '../../components/containMain/index';
-import './index.scss';
+import './index.css';
 
 // import {
 //   AppstoreOutlined,

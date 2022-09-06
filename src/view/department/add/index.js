@@ -5,7 +5,7 @@ import { Form, InputNumber, Input, Radio, Button, message } from 'antd';
 
 import { addDepartment } from '../../../api/department/index.js';
 
-import './index.scss';
+// import './index.scss';
 
 // import { SmileOutlined } from '@ant-design/icons';
 const layout = {

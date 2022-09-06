@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.scss';
+// import './About.scss';
 import $ from 'jquery'
 
 class About extends React.Component {

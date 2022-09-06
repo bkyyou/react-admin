@@ -2,7 +2,7 @@ import React from 'react';
 import { Spin } from 'antd';
 import { connect } from 'react-redux';
 import { bindActions, bindState } from '../../reducer/reducer';
-import './index.scss';
+import './index.css';
  
 class Loading extends React.Component {
   constructor(props) {
