@@ -1,3 +1,11 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+
+put -r /Users/j/Desktop/build/node_modules  /home/react-admin-service-tem-test/node_modules
+
+put -r /Users/j/Desktop/build/*  /var/lib/docker/volumes/tomcat02/webapps/
+put -r /Users/j/Desktop/build/static/css/*  /var/lib/docker/volumes/tomcat02/webapps/static/css/
+put -r /Users/j/Desktop/build/static/js/*  /var/lib/docker/volumes/tomcat02/webapps/static/js/
+put -r /Users/j/Desktop/build/static/media/*  /var/lib/docker/volumes/tomcat02/webapps/static/media/
