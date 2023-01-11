@@ -5,7 +5,18 @@ import { message } from "antd";
 // console.log('process', process);
 // console.log(process.env.REACT_APP_BASE_URL)
 
-const baseURL = process.env.REACT_APP_BASE_URL;
+// 本地开发使用
+const useProxy = false;
+
+let baseURL = '';
+console.log('process.env.REACT_APP_ENV', process.env.REACT_APP_ENV)
+if (!useProxy && process.env.REACT_APP_ENV === 'dev') {
+  baseURL = process.env.REACT_APP_BASE_URL_2;
+  console.log('process.env.REACT_APP_BASE_URL_2', process.env.REACT_APP_BASE_URL_2)
+} else {
+  baseURL = process.env.REACT_APP_BASE_URL;
+}
+
 // const baseURL = 'http://1.116.142.138:3000';
 // const baseURL = 'http://localhost:4008';
 
