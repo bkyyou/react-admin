@@ -6,7 +6,7 @@ import { message } from "antd";
 // console.log(process.env.REACT_APP_BASE_URL)
 
 // 本地开发使用
-const useProxy = false;
+const useProxy = true;
 
 let baseURL = '';
 console.log('process.env.REACT_APP_ENV', process.env.REACT_APP_ENV)

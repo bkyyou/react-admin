@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      const proxyObjChild = new Proxy({c: 2}, {
+        get: function(target, attr) {
+          console.log('get child');
+          return target[attr]
+        }
+      })
+      let obj = {
+          a: 1,
+          b: {c: 2},
+          d: ['d1','d2']
+          // b: proxyObjChild
+        };
+        let proxyObj = new Proxy(obj, {
+          get: function (target, attr) {
+            console.log('get')
+            return target[attr]; // obj["a"]
+          },
+          set: function (target, attr, val) {
+            console.log('set')
+            target[attr] = val; // obj["a"]
+          },
+          
+        });
+        // console.log(proxyObj.a); // 1
+        console.log(proxyObj.b.c); // 1
+        console.log(proxyObj.d[0]);
+        // console.log(proxyObj.d);
+
+        // proxyObj.d = 3;
+        // console.log(proxyObj.d)
+
+  </script>
+</body>
+</html>

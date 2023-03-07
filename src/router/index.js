@@ -57,10 +57,54 @@ const routers = [
     ]
   },
   {
+    title: '计算公式',
+    icon: 'edit',
+    key: '/home/drag',
+    children: [
+      {
+        key: '/home/drag',
+        title: '拖拽编辑',
+        icon: ''
+      },
+    ]
+  },
+  {
     title: '请假',
     icon: 'info-circle-o',
     key: '/home/about'
   },
+  {
+    title: '组件测试',
+    icon: 'info-circle-o',
+    key: '/home/test',
+    children: [
+      {
+        key: '/home/expandtabletest',
+        title: '表格套娃',
+        icon: ''
+      },
+      // {
+      //   title: '虚拟列表',
+      //   icon: 'info-circle-o',
+      //   key: '/home/virtuallist'
+      // },
+      {
+        title: 'testtree',
+        icon: 'info-circle-o',
+        key: '/home/testtree'
+      },
+    ]
+  },
+  // {
+  //   title: 'antd虚拟列表',
+  //   icon: 'info-circle-o',
+  //   key: '/home/testantdvirtable'
+  // },
+  // {
+  //   title: 'testtree',
+  //   icon: 'info-circle-o',
+  //   key: '/home/testtree'
+  // },
   {
     title: '加班',
     icon: 'info-circle-o',

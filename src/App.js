@@ -41,7 +41,7 @@ function App() {
         <Route component={upload} path="/upload" />
         {/* <Route component={ReduxPage} path="/ReduxPage" /> */}
         <Route component={ReduxPage2} path="/ReduxPage2" />
-        <Route component={FormRender} path="/FormRender" />
+        {/* <Route component={Drag} path="/Drag" /> */}
         {/* <Route component={MyProgress} path="/progress" /> */}
         {/* <Route component={New} path="/new" /> */}
         {/* <Route component={About} path="/about" /> */}

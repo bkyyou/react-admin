@@ -13,12 +13,12 @@ import  PrivateRouter from "../privateRouter/index";
 // import DepartmentList from '../../view/department/list/index';
 
 // 自动化工程
-const files = require.context("../../view/", true, /\.js$/); 
+const files = require.context("../../view/", true, /\.js(x)?$/); 
 // const files = require.context("../../router/", true, /\.js$/); 
 
 // // ./account/Login.js  ./department/add/index.js
 // console.log('files', files);
-// console.log('files.key()', files.keys());
+console.log('files.key()', files.keys());
 // console.log('files.keys', files.keys);
 
 // ./src/view/account/Login.js
@@ -34,8 +34,9 @@ let allHomeRouter = [];
 //   return files.resolve(key);
 // });
 files.keys().forEach(key => {
-  // console.log('key', key)
   if (!(new RegExp('\/(' + noContainsArr.join('|') + ')\/', 'ig').test(key)))  {
+    console.log('key', key)
+
     './dynamickTest/dynamic.js' != key && allHomeRouter.push(getRightData(key))
   }
 })
@@ -52,7 +53,7 @@ function getRightData(val) {
   // console.log('path', path);
   // console.log('files[val].default', files(val).default);
   // path = import(path);
-  // console.log(files(val));
+  console.log(files(val));
   
   return {
     component: files(val).default,
@@ -62,7 +63,7 @@ function getRightData(val) {
 
 // allHomeRouter = allHomeRouter.slice(2);
 
-// console.log('allHomeRouter', allHomeRouter);
+console.log('allHomeRouter', allHomeRouter);
 
 
 class ContainMain extends Component{
