@@ -93,6 +93,16 @@ const routers = [
         icon: 'info-circle-o',
         key: '/home/testtree'
       },
+      {
+        title: 'testdialog',
+        icon: 'info-circle-o',
+        key: '/home/testdialog'
+      },
+      {
+        title: 'drag2',
+        icon: 'info-circle-o',
+        key: '/home/drag2'
+      },
     ]
   },
   // {
