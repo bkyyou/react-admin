@@ -119,6 +119,11 @@ const routers = [
     title: '加班',
     icon: 'info-circle-o',
     key: '/home/overtime'
+  },
+  {
+    title: 'antd测试',
+    icon: 'info-circle-o',
+    key: '/home/antdtest'
   }
 ]
 
